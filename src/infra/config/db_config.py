@@ -23,7 +23,6 @@ class DBConectionHandler:
         engine = create_engine(self.__conection_string)
         session_maker = sessionmaker()
         self.session = session_maker(bind=engine)
-        print("connection created")
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):

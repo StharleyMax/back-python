@@ -21,8 +21,6 @@ def test_insert_user():
         "select * from users where id = '{}';".format(new_user.id)
     ).fetchone()
     engine.execute("delete from users where id = '{}';".format(new_user.id))
-    print(new_user)
-    print(query_user)
 
     assert new_user.id == query_user.id
     assert new_user.name == query_user.name
